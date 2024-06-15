@@ -5,12 +5,14 @@ import Cart from "./images/icon-cart.svg";
 import "./App.css";
 
 function App() {
+  let width = window.innerWidth;
+  console.log(width);
   return (
     <div>
       <main>
         <div className="image-container">
           <img
-            src={PerfumeDesktop}
+            src={width > 640 ? PerfumeDesktop : PerfumeMobile}
             alt="A picture of Gabrielle Essence Eau De Parfum "
           />
         </div>

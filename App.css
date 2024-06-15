@@ -4,11 +4,13 @@ main {
   margin: 0 auto;
   background: white;
   font-family: "Montserrat", sans-serif;
+  border-radius: 8px;
 }
 
 .image-container > img {
   width: 300px;
-  height: 500px;
+  height: auto;
+  object-fit: contain;
   border-radius: 8px 0 0 8px;
 }
 
@@ -61,4 +63,26 @@ span {
   font-weight: 500;
   text-decoration: line-through;
   margin-left: 5px;
+}
+
+@media (max-width: 640px) {
+  main {
+    display: block;
+    max-width: 100%;
+    border-radius: 8px;
+  }
+
+  .image-container {
+    height: auto;
+    padding-bottom: 10px;
+  }
+  .image-container > img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+  }
+  .details {
+    border-radius: 0;
+    padding: 15px;
+  }
 }
